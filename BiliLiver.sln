@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bilibili-Liver", "Bilibili-Liver", "{9261BFD7-5412-422F-8CBA-23B6542D2A44}"
+	ProjectSection(SolutionItems) = preProject
+		Bilibili-Liver\background.js = Bilibili-Liver\background.js
+		Bilibili-Liver\content.js = Bilibili-Liver\content.js
+		Bilibili-Liver\icon.png = Bilibili-Liver\icon.png
+		Bilibili-Liver\jquery-3.0.0.min.js = Bilibili-Liver\jquery-3.0.0.min.js
+		Bilibili-Liver\manifest.json = Bilibili-Liver\manifest.json
+		Bilibili-Liver\popup.html = Bilibili-Liver\popup.html
+		Bilibili-Liver\popup.js = Bilibili-Liver\popup.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
