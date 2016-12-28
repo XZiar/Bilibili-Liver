@@ -8,9 +8,10 @@ function main()
 }
 
 $(".room-down").remove();
-var ctxt = "<div class='room-down main-section float-right' style='padding: 5px 20px 5px 20px;margin: 5px 20px 5px 20px;'>"
-	+ "<div class='room-info-row'><h2 class='section-title'>Bilibili-Liver</h2></div>"
+var ctxt = "<div class='room-down main-section float-right' style='padding: 5px;'>"
+	+ "<div class='room-info-row' style='display: table-row;'><h2 class='section-title'>Bilibili-Liver</h2></div>"
 	+ "<div class='room-info-row'><a href='' target='_blank' ><div class='live-tag v-top'>下载</div></a>"
+    + "<div class='live-tag v-top' id='liveCopy'>复制</div>"
 	+ "<div class='live-tag v-top' id='liveFav'>收藏</div></div>"
 	+ "<input type='hidden' id='the_ret' /></div>";
 $(".info-ctnr").append(ctxt);
@@ -42,6 +43,16 @@ $("#liveFav").click(function()
 	}, function()
 	{
 		alert("ok");
+	});
+});
+
+$("#liveCopy").click(function ()
+{
+    var ret = JSON.parse(obj.val());
+    chrome.runtime.sendMessage(
+	{
+	    action: "copyFav",
+	    data: ret.urls[0]
 	});
 });
 

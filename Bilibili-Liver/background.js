@@ -47,10 +47,17 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 			saveFav(favs, sendResponse);
 		});
 		return true;
+	case "copyFav":
+	    $("#copyData").val(request.data);
+        $("#copyBtn").trigger("click");
+	    return true;
 	case "getFunc":
 		sendResponse("" + queryURL);
 		return;
 	}
 });
 
-
+$(document).ready(function ()
+{
+    new Clipboard('#copyBtn');
+});

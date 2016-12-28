@@ -1,7 +1,7 @@
 {  
 	"manifest_version": 2, 
 	"name": "Bilibili-Liver",  
-	"version": "1.0.0",  
+	"version": "1.0.1",  
 	"description": "Download video for bilibili live",  
 	"browser_action": 
 	{  
@@ -15,10 +15,11 @@
 	"tabs",
 	"storage"
 	],
-	"background":
-	{
-		"scripts": ["jquery-3.0.0.min.js","background.js"]
-	},
+  "background": 
+  {
+    "page": "background.html"
+    //"scripts": [ "jquery-3.0.0.min.js", "clipboard.min.js", "background.js" ]
+  },
 	"content_scripts": 
 	[{
       "matches": ["http://live.bilibili.com/*"],
